@@ -39,7 +39,14 @@ public class Program {
 		sellerDao.insert(newSeller);
 		
 		System.out.println("Inserido! Novo vendedor inserido com o id: " + newSeller.getId());
-
+		
+		
+		System.out.println("\n teste 5: seller update ====");
+		seller = sellerDao.findById(3);
+		seller.setName("henrique eder Wayne");
+		sellerDao.update(seller);
+		System.out.println("Atualização do vededor " + seller.getId() + " realizada.");
+		
 	}
 
 }
